@@ -1,11 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
 const UserRoute = require('./Routes/UserRoute');
 
 const app = express();
-const port = 3000;
-const db = 'mongodb+srv://Alamgir_khan:mern_project@cluster0.faft7su.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const port = process.env.PORT || 3000; 
+const db = process.env.MONGO_URI;
 
 app.use(express.json());
 app.use(cors());
