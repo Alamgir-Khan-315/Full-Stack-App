@@ -10,7 +10,7 @@ const db = process.env.MONGO_URI;
 
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://your-frontend.vercel.app'],
+  origin: ['http://localhost:5173', 'https://full-stack-app-frontend-beta.vercel.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
