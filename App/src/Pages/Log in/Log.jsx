@@ -18,13 +18,14 @@ const LogIn = () => {
     }));
   };
 
+  const API_URL = process.env.REACT_APP_API_URL;
   
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      const response = await axios.post("https://full-stack-app-backend-rouge.vercel.app/api/users/login", {
+      const response = await axios.post(`${API_URL}/api/users/login`, {
         email: formData.email,
         password: formData.password,
       });
