@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const dotenv = require('dotenv');
+require('dotenv').config();  
+
 const UserRoute = require('./Routes/UserRoute');
 
 const app = express();
@@ -15,11 +16,9 @@ app.use(cors({
   credentials: true
 }));
 
-
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('✅ MongoDB Connected'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
-
 
 app.use('/api/users', UserRoute);
 
