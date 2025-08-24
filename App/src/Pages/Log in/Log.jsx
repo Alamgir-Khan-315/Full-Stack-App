@@ -25,7 +25,8 @@ const LogIn = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`http://localhost:3000/users/login`, {
+      // const response = await axios.post(`http://localhost:3000/api/users/login`, {
+      const response = await axios.post(`https://full-stack-app-backend-rouge.vercel.app/api/users/login`, {
         email: formData.email,
         password: formData.password,
       });

@@ -28,7 +28,8 @@ const Sign = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/api/users/", {
+      // const response = await axios.post("http://localhost:3000/api/users/", {
+      const response = await axios.post("https://full-stack-app-backend-rouge.vercel.app/api/users/", {
         name: formData.name,
         email: formData.email,
         password: formData.password,
@@ -52,7 +53,7 @@ const Sign = () => {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name */}
+          
           <div>
             <label className="block text-sm font-medium text-slate-600 mb-1">
               Name
@@ -68,7 +69,7 @@ const Sign = () => {
             />
           </div>
 
-          {/* Email */}
+
           <div>
             <label className="block text-sm font-medium text-slate-600 mb-1">
               Email
@@ -84,7 +85,7 @@ const Sign = () => {
             />
           </div>
 
-          {/* Password */}
+
           <div>
             <label className="block text-sm font-medium text-slate-600 mb-1">
               Password
@@ -100,7 +101,7 @@ const Sign = () => {
             />
           </div>
 
-          {/* Confirm Password */}
+
           <div>
             <label className="block text-sm font-medium text-slate-600 mb-1">
               Confirm Password
@@ -116,7 +117,7 @@ const Sign = () => {
             />
           </div>
 
-          {/* Button */}
+
           <button
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition"

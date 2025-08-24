@@ -12,13 +12,13 @@ const Dashboard = () => {
       setUserName(user.name);
     } else {
       // if no user, redirect to login
-      navigate("/log_in");
+      navigate("/");
     }
   }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("user"); 
-    navigate("/log_in"); 
+    navigate("/"); 
   };
 
   return (
